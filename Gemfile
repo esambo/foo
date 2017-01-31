@@ -10,6 +10,9 @@ end
 gem 'rails', '~> 5.0.1'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
+# gem 'prodder', require: 'prodder/railtie'
+# gem 'prodder', require: 'prodder/railtie', github: 'slania/prodder', branch: 'issue_fixes'
+gem 'prodder', require: 'prodder/railtie', path: '../../gems/prodder'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password

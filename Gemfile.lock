@@ -1,3 +1,9 @@
+PATH
+  remote: ../../gems/prodder
+  specs:
+    prodder (1.7.1)
+      deject
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -42,6 +48,7 @@ GEM
     builder (3.2.3)
     byebug (9.0.6)
     concurrent-ruby (1.0.4)
+    deject (0.2.3)
     erubis (2.7.0)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
@@ -108,6 +115,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   pg (~> 0.18)
+  prodder!
   rails (~> 5.0.1)
   tzinfo-data
 
