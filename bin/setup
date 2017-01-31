@@ -25,6 +25,7 @@ chdir APP_ROOT do
 
   puts "\n== Preparing database =="
   system 'createuser --superuser  local_dev_superuser'
+  system 'createuser --createrole foo__owner'
   system! 'bin/rails db:reset db:migrate'
 
   puts "\n== Removing old logs and tempfiles =="

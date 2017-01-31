@@ -24,7 +24,10 @@ default: &default
 development:
   <<: *default
   database: foo_development
-  username: local_dev_superuser
+  superuser:      local_dev_superuser
+  migration_user: foo__owner
+  username:       foo__web            # have your DBA create this in production
+  username:       local_dev_superuser # remove once your DBA set up the _foo__web_ user in production and you ran prodder against production
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
