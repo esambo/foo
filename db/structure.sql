@@ -28,7 +28,9 @@ CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
 COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
 
 
-SET search_path = public, pg_catalog;
+CREATE SCHEMA IF NOT EXISTS foo;
+
+SET search_path = foo, public, pg_catalog;
 
 SET default_tablespace = '';
 
@@ -75,7 +77,7 @@ ALTER TABLE ONLY schema_migrations
 -- PostgreSQL database dump complete
 --
 
-SET search_path TO "$user", public;
+SET search_path TO foo, "$user", public;
 
 INSERT INTO schema_migrations (version) VALUES
 ('20170131034920');
